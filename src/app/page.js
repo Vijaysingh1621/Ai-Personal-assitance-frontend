@@ -13,9 +13,10 @@ export default function ChatBox() {
     setMessages([...messages, { user: input, bot: "Thinking..." }]);
 
     try {
-      const res = await axios.post("https://personal-ai-assistant-u5zh.onrender.com/chat/", {
+      // Call your local API route instead
+      const res = await axios.post("/api/chat", {
         user_input: input,
-        user_id: "vijay123", // Replace with dynamic user ID
+        user_id: "1", // Replace with dynamic user ID
       });
 
       // Update chat with AI response
